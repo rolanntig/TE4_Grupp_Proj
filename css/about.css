@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#nav {
+    border-top: 5px solid coral;
+    color: black;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 5px 4px lightgray;
+    position: sticky;
+    top: 0;
+}
+
+.nav-icon {
+    display: none;
+}
+
+#links {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    background-color: white;
+}
+
+#links>a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    margin-left: 9.5vw;
+    letter-spacing: 5px;
+}
+
+#links>a:hover {
+    text-decoration: underline;
+}
+
+.container {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "img-item"
+      "about-item";
+    height: 100vh;
+}
+  
+.img-item { 
+    grid-area: img-item; 
+    background-image: url('https://images6.alphacoders.com/727/thumb-1920-727742.jpg');
+    background-position: 50% 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 100px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: white;
+}
+
+.about-item { 
+    grid-area: about-item; 
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-item>p {
+    color: white;
+    white-space: break-spaces;
+    width: 40%;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.contact-info {
+    color: white;
+    white-space: break-spaces;
+    width: 30%;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info>img {
+    margin-top: 30px;
+}
+
+@media (max-width: 414px) {
+    #links>a {
+        font-size: 30px;
+        margin-left: 5px;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .about-item>p {
+        width: 90%;
+        text-align: justify;
+        font-size: 16px;
+    }
+
+    .contact-info {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .container {
+        height: 100%;
+    }
+
+    .nav-icon{
+        display:block;
+        cursor: pointer;
+        font-size: 5vh;
+    }
+
+    #nav{
+        display:flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        height: 5vh;
+    }
+
+    #links{
+        display:none;
+        flex-direction: column;
+        position: absolute;
+        top:2.9rem;
+        width:100%;
+        padding:10px;
+        background-color: coral;
+    }
+
+    #links.active{
+        display:flex;
+    }
+}

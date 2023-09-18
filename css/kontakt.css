@@ -1,0 +1,372 @@
+*{
+
+    margin: 0%;
+    padding: 0%;
+
+
+}
+
+
+body{
+
+    background-image: url('../img/square-black-slate-with-sushi-grey-background-generative-ai_446633-9342.jpg');
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    
+
+}
+
+#nav {
+    border-top: 5px solid coral;
+    color: black;
+    background-color: white;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 5px 4px lightgray;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.nav-icon {
+    display: none;
+}
+
+#nav>img {
+    width: 10vw;
+}
+
+#links {
+    display: flex;
+    align-items: center;
+}
+
+
+#links>a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    margin-left: 9.5vw;
+    letter-spacing: 5px;
+    
+}
+
+#links>a:hover {
+    text-decoration: underline;
+}
+
+.input{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 50px; 
+    
+    margin-left: 24%;
+    margin-top: 10%;
+    padding: 16px;
+    font-size: 30px;
+
+    border-radius: 10px;
+    border-color: black;
+
+}
+
+.first-name { 
+    
+    grid-area: 1 / 1 / 2 / 2;
+    width: 50%;
+    height: 200%;
+
+    border-radius: 5px;
+    border-color: black;
+
+    position: relative;
+    animation: first-name-move 3s;
+
+    margin-left: 5%;
+
+}
+
+@keyframes first-name-move {
+    from {left: -150%;}
+    to {left: 0%;}
+}
+
+
+.last-name { 
+
+    grid-area: 1 / 2 / 2 / 3; 
+
+    width: 50%;
+    height: 200%;
+
+    border-radius: 5px;
+    border-color: black;
+
+    margin-left: -35%;
+
+    position: relative;
+    animation: last-name-move 3s;
+}
+
+
+@keyframes last-name-move {
+    from {right: -150%;}
+    to {right: 0%;}
+}
+
+
+
+.email { 
+    grid-area: 2 / 1 / 3 / 2; 
+
+    width: 50%;
+    height: 200%;
+
+    border-radius: 5px;
+    border-color: black;
+
+    position: relative;
+    animation: email-move 3s;
+
+    margin-left: 5%;
+    
+
+}
+
+@keyframes email-move {
+    from {left: -150%;}
+    to {left: 0%;}
+}
+
+
+.phone { 
+    grid-area: 2 / 2 / 3 / 3;
+
+    width: 50%;
+    height: 200%;
+
+    border-radius: 5px;
+    border-color: black;
+
+    margin-left: -35%;
+
+    position: relative;
+    animation: phone-move 3s;
+}
+
+@keyframes phone-move {
+    from {right: -150%;}
+    to {right: 0%;}
+}
+
+textarea{
+    background-color: white;
+    width: 43%;
+    margin-left: 25%;
+    margin-top: 25px;
+    font-size: 20px;
+    padding: 16px 16px;
+    border-radius: 10px;
+    border-color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    position: relative;
+    animation: textarea-move 3s;
+}
+
+@keyframes textarea-move{
+    from {left: -150%;}
+    to {left: 0%;}
+}
+
+input:focus-within{
+
+    outline: none;
+    border-color: #5bd183;
+    border-width: 3px;
+
+
+}
+
+
+
+textarea:focus-within{
+
+    outline: none;
+    border-color: #5bd183;
+    border-width: 3px;
+
+}
+
+.button{
+    margin-top: 1.3%;
+    margin-left: 32.4%;
+}
+
+button{
+
+    background-color: whitesmoke;
+    border-radius: 5px;
+    border-color: black;
+    font-size: 30px;
+    padding: 0.5% 10%;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 5%;
+
+
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s; 
+    -o-transition: all 0.5s; 
+    transition: all 0.5s;
+
+    position: relative;
+    animation: button-move 3s;
+
+}
+
+@keyframes button-move {
+    from {right: -150%;}
+    to {right: 0%;}
+}
+
+button:hover{
+    opacity: 100%;
+    background-color: dimgray;
+    cursor: pointer;
+    
+}
+
+
+
+
+
+
+@media screen and (max-width: 414px) {
+
+    #nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    @keyframes first-name-move {
+        from {left: -150%;}
+        to {left: -15%;}
+    }
+
+    @keyframes button-move {
+        from {right: -100%;}
+        to {right: 60%;}
+    }
+
+    #links {
+        margin-top: 10px;
+    }
+
+    #links>a {
+        font-size: 30px;
+        margin-left: 0;
+    }
+    
+    .input {
+        display: block; /* Change to block layout */
+        text-align: center; /* Center-align labels and input fields */
+    }
+
+    .input{
+        width:40vw;
+    }
+
+    .first-name,
+    .last-name,
+    .email,
+    .phone,
+    textarea {
+        width: 70vw;
+        height: 10vh;
+        padding: 10px;
+        border-radius: 5px;
+        border-color: black;
+        margin: 10px auto; /* Center-align input fields vertically */
+    }
+
+    /* Remove animations for responsive layout */
+    @keyframes first-name-move {
+        from { left: -150%; }
+        to { left: 0%; }
+    }
+
+    @keyframes last-name-move {
+        from { right: -150%; }
+        to { right: -40%; }
+    }
+
+    @keyframes email-move {
+        from { left: -150%; }
+        to { left: 0%; }
+    }
+
+    @keyframes phone-move {
+        from { right: -150%; }
+        to { right: 0%; }
+    }
+    
+    
+    .first-name,
+    .last-name,
+    .email,
+    .phone {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        border-color: black;
+        padding: 10px;
+    }
+    
+
+
+    .button {
+        margin-top: 10px;
+        margin-left: 20%;
+        
+    }
+
+    .nav-icon{
+        display:block;
+        cursor: pointer;
+        font-size: 5vh;
+        padding-bottom: 5px;
+    }
+
+    #nav{
+        display:flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        height: 5vh;
+
+    }
+
+    #links{
+        display:none;
+        flex-direction: column;
+        position: absolute;
+        top:2.5rem;
+        width:100%;
+        padding:10px;
+        background-color: coral;
+    }
+    textarea{
+        margin-left:15%;
+    }
+
+    #links.active{
+        display:flex;
+        z-index: 10;
+    }
+}
